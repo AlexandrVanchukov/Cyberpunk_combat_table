@@ -1,0 +1,40 @@
+{
+  "bodyguarg": {
+    "name": "bodyguard",
+    "int" : 3,
+    "ref": 7,
+    "dex": 4,
+    "tech": 2,
+    "cool": 2,
+    "will": 3,
+    "move": 3,
+    "body": 5,
+    "emp": 3,
+    "hp": 30,
+    "armor": 7,
+    "main-weapon-damage": 5,
+    "secondary-weapon-damage": 4,
+    "melee-weapon-damage": 2,
+    "main-weapon-plus": 10,
+    "melee-weapon-plus": 6
+  },
+  "punk": {
+    "name": "punk",
+    "int" : 3,
+    "ref": 7,
+    "dex": 4,
+    "tech": 2,
+    "cool": 2,
+    "will": 3,
+    "move": 3,
+    "body": 5,
+    "emp": 3,
+    "hp": 25,
+    "armor": 4,
+    "main-weapon-damage": 4,
+    "secondary-weapon-damage": 3,
+    "melee-weapon-damage": 2,
+    "main-weapon-plus": 8,
+    "melee-weapon-plus": 6
+  }
+}
