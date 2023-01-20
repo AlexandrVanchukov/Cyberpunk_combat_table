@@ -24,12 +24,12 @@ const UnitItem = (props) => {
     const [hit, setHit] = useState(0);
     const [damage, setDamage] = useState([]);
     const [rDamage,setRDamage] = useState(0);
-
-    const [name, setName] = useState(props.unit.enemy.name);
-    const [initiative, setInitiative] = useState(props.unit.init);
-    const [hp, setHp] = useState(props.unit.enemy.hp);
-    const [armorHead,setArmorHead] = useState(props.unit.enemy.armorBody);
-    const [armorBody,setArmorBody] = useState(props.unit.enemy.armorHead);
+    
+    const [name, setName] = useState();
+    const [initiative, setInitiative] = useState();
+    const [hp, setHp] = useState();
+    const [armorHead,setArmorHead] = useState();
+    const [armorBody,setArmorBody] = useState();
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max) + 1;
@@ -160,6 +160,15 @@ const UnitItem = (props) => {
         setModalEdit(false);
     }
 
+    function edit(){
+        setName(props.unit.enemy.name);
+        setInitiative(props.unit.init);
+        setHp(props.unit.enemy.hp);
+        setArmorBody(props.unit.enemy.armorBody)
+        setArmorHead(props.unit.enemy.armorHead);
+        setModalEdit(true);
+    }
+
     return (
         <tr>
             <td className={classes.red_border}>{props.unit.init}</td>
@@ -215,7 +224,7 @@ const UnitItem = (props) => {
                 </Modal>
             </span>
             <span className={classes.button}>
-                <Button onClick={() => setModalEdit(true)}>Edit</Button>
+                <Button onClick={edit}>Edit</Button>
                 <Modal visible={modalEdit} setVisible={setModalEdit}>
                     <table>
                         <thead>
