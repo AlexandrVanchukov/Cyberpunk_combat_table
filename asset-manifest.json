@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Cyberpunk_combat_table/static/css/main.963d6b53.css",
+    "main.js": "/Cyberpunk_combat_table/static/js/main.c59b914e.js",
+    "index.html": "/Cyberpunk_combat_table/index.html",
+    "main.963d6b53.css.map": "/Cyberpunk_combat_table/static/css/main.963d6b53.css.map",
+    "main.c59b914e.js.map": "/Cyberpunk_combat_table/static/js/main.c59b914e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.963d6b53.css",
+    "static/js/main.c59b914e.js"
+  ]
+}
