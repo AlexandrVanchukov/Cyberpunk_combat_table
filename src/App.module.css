@@ -1,0 +1,22 @@
+div{
+    font-size: 1.5vh;
+    font-family:Arial;
+}
+body{
+    margin: 0;
+}
+.header{
+    background-color: #cb2418;
+    margin-bottom: 10px;
+}
+.headerItem{
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    margin: 10px 0px 10px 10px;
+}
+.headerLink{
+
+    text-decoration: none;
+    color: #cb2418;
+}

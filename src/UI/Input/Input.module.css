@@ -1,6 +1,8 @@
 .myInput{
-    width: 100%;
-    padding: 5px 15px;
+    width: 97%;
+    padding: 5px 0% 5px 3%;
     margin: 5px 0px;
     border: 1px solid teal;
+    font-family: Arial;
+    font-size: 1.5vh;
 }

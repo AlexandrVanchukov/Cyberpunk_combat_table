@@ -1,64 +1,47 @@
 import React, {useState} from 'react';
 import Button from "../UI/Button/Button";
 import Select from "../UI/Select/Select";
+import Input from "../UI/Input/Input";
 
 const AddEnemyForm = (props) => {
     const [selectedEnemy, setSelectedEnemy] = useState({})
-    const enemyList = {
-        "bodyguarg": {
-            "name": "bodyguard",
-            "int" : 3,
-            "ref": 7,
-            "dex": 4,
-            "tech": 2,
-            "cool": 2,
-            "will": 3,
-            "move": 3,
-            "body": 5,
-            "emp": 3,
-            "hp": 30,
-            "armor": 7,
-            "main-weapon-damage": 5,
-            "secondary-weapon-damage": 4,
-            "melee-weapon-damage": 2,
-            "main-weapon-plus": 10,
-            "melee-weapon-plus": 6
-        },
-        "punk": {
-            "name": "punk",
-            "int" : 3,
-            "ref": 7,
-            "dex": 4,
-            "tech": 2,
-            "cool": 2,
-            "will": 3,
-            "move": 3,
-            "body": 5,
-            "emp": 3,
-            "hp": 25,
-            "armor": 4,
-            "main-weapon-damage": 4,
-            "secondary-weapon-damage": 3,
-            "melee-weapon-damage": 2,
-            "main-weapon-plus": 8,
-            "melee-weapon-plus": 6
+    const [index, setIndex] = useState(0)
+    const [initiative, setInitiative] = useState(0);
+    const [name, setName] = useState('Player');
+
+
+    const playersList = {
+        "test_player": {
+            "name": name
         }
     }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max) + 1;
+    }
+
     function addNewEnemy(e){
         e.preventDefault()
         if(selectedEnemy == 1){
-            const  newEnemy = {enemy: enemyList.bodyguarg , id: Date.now()}
-            props.addEnemy(newEnemy.enemy)
-
+            const  newEnemy = {enemy: props.enemyList.bodyguard , id: index, init: getRandomInt(10) + props.enemyList.bodyguard.ref}
+            setIndex(index +1);
+            props.addEnemy(newEnemy)
         }
         else if (selectedEnemy == 2){
-            const  newEnemy = {enemy: enemyList.punk , id: Date.now()}
-            props.addEnemy(newEnemy.enemy)
-            console.log(newEnemy.enemy);
+            const  newEnemy = {enemy: props.enemyList.punk , id: index, init: getRandomInt(10) + props.enemyList.punk.ref}
+            setIndex(index +1);
+            props.addEnemy(newEnemy)
         }
     }
     function selectEnemy(enemy){
         setSelectedEnemy(enemy)
+    }
+
+    function addNewPlayer(e){
+        e.preventDefault()
+        const  newPlayer = {enemy: playersList.test_player , id: index, init: initiative}
+        setIndex(index +1);
+        props.addEnemy(newPlayer)
     }
 
 
@@ -75,8 +58,21 @@ const AddEnemyForm = (props) => {
                     ]}
                 />
             </div>
+            <Button onClick={e => addNewEnemy(e)}>Add enemy</Button>
+            <div>
+                <Input
+                    value = {name}
+                    onChange={e => (setName(e.target.value))}
+                    type = "text"
+                    placeholder="Name"t/>
+                <Input
+                    value = {initiative}
+                    onChange={e => setInitiative(e.target.value)}
+                    type = "number"
+                    placeholder="Initiative"t/>
+                <Button onClick={e => addNewPlayer(e)}>Add player</Button>
+            </div>
 
-            <Button onClick={addNewEnemy}>Add enemy</Button>
         </div>
     );
 };
