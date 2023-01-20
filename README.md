@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Game master helper
+### Cyberpunk RED is a tabletop role-playing game where you need to take into account many parameters during a combat encounter, besides you can play for 4 or more enemies.
+This web application will help the master of the game to conduct battle scenes without being distracted by calculations and much more.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Main features to speed up the battle scenes:
+- Quick addition of enemies by template
+- Adding players
+- Sorting by initiative (you can just go down the list)
+- Attack against the player (you only need to determine hits)
+- Dealing damage to enemies (Just specify the damage, armor and HP to change automatically)
+- Manually change any enemy or player parameter
+- Removal from the list with the preservation of sorting
 
-## Available Scripts
+You can also view all information about the enemy in the Enemy Info section
 
-In the project directory, you can run:
+Attention!
+When the page is updated, data from the table is deleted.
 
-### `npm start`
+# Помощник ведущего
+### Cyberpunk RED - настольная ролевая игра, где нуже учитывать много параметров во время боевого столкновения, к тому же вы можете отыгрывать за 4 и более врагов.
+Это веб приложение поможет мастеру игры проводить боевые сцены не отвлекаясь на расчёты и многое другое.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Основные функции для ускорения боевых сцен:
+- Быстрое добавление врагов по шаблону
+- Добавление игроков
+- Сортировка по инициативе (можно просто спускаться вниз по списку)
+- Атака против игрока(вам нужно лишь определить попадание)
+- Нанесение урона врагам(просто укажите урон, броня и хп изменяться автоматически)
+- Ручное изменение любого параметра врага или игрока
+- Удаление из списка с сохранением сортировки
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Также вы можете посмотреть всю информацию о враге в разделе Enemy Info
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Внимание!
+При обновлении страницы данные из таблицы удаляются.
+ 
