@@ -58,7 +58,7 @@ const AddEnemyForm = (props) => {
                     ]}
                 />
             </div>
-            <Button onClick={e => addNewEnemy(e)}>Add enemy</Button>
+            <Button buttonStyle={'red'} onClick={e => addNewEnemy(e)}>Add enemy</Button>
             <div>
                 <Input
                     value = {name}
@@ -70,7 +70,7 @@ const AddEnemyForm = (props) => {
                     onChange={e => setInitiative(e.target.value)}
                     type = "number"
                     placeholder="Initiative"t/>
-                <Button onClick={e => addNewPlayer(e)}>Add player</Button>
+                <Button buttonStyle={'red'} onClick={e => addNewPlayer(e)}>Add player</Button>
             </div>
 
         </div>

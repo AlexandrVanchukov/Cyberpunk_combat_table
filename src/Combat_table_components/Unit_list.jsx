@@ -31,7 +31,7 @@ const UnitList = (props) => {
                 </tbody>
             </table>
             <div>
-                <Button onClick={() => setModal(true)}>Add enemy</Button>
+                <Button buttonStyle={'red'} onClick={() => setModal(true)}>Add enemy</Button>
                 <Modal visible={modal} setVisible={setModal}>
                     <Add_enemy_form addEnemy={props.addEnemy} sort={props.sort} enemyList={props.enemyList}/>
                 </Modal>

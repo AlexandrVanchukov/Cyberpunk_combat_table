@@ -24,7 +24,7 @@ const UnitItem = (props) => {
     const [hit, setHit] = useState(0);
     const [damage, setDamage] = useState([]);
     const [rDamage,setRDamage] = useState(0);
-    
+
     const [name, setName] = useState();
     const [initiative, setInitiative] = useState();
     const [hp, setHp] = useState();
@@ -104,7 +104,6 @@ const UnitItem = (props) => {
     }
 
     function printDamage(){
-
         let stringDamage = '';
         for(let i = 0; i < damage.length-1; i++){
             stringDamage = stringDamage + damage[i] + "+";
@@ -180,39 +179,39 @@ const UnitItem = (props) => {
             <td className={classes.red_border}>{props.unit.enemy.armorHead}</td>
             <td className={classes.red_border}>{props.unit.enemy.move}</td>
             <span className={classes.button}>
-                <Button onClick={() => setModalPart(true)} dis={isPlayer}>Attack</Button>
+                <Button buttonStyle={'stroke-red'} onClick={() => setModalPart(true)} dis={isPlayer}>Attack</Button>
                 <Modal visible={modalPart} setVisible={setModalPart}>
-                    <Button onClick={() => choosePartAttack('body')}>Body</Button>
-                    <Button onClick={() => choosePartAttack('head')}>Head</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => choosePartAttack('body')}>Body</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => choosePartAttack('head')}>Head</Button>
                 </Modal>
                 <Modal visible={modalAttack} setVisible={setModalAttack}>
                     <div>Attack to {part}. Bonus: {bonus}</div>
                     <div>
-                        <Button onClick={mainAttack}>Main hit:+{props.unit.enemy.mainWeaponPlus} damage:{props.unit.enemy.mainWeaponDamage}d6</Button>
+                        <Button buttonStyle={'stroke-red'} onClick={mainAttack}>Main hit:+{props.unit.enemy.mainWeaponPlus} damage:{props.unit.enemy.mainWeaponDamage}d6</Button>
                     </div>
                     <div>
-                        <Button onClick={secondaryAttack}>Secondary hit:+{props.unit.enemy.secondaryWeaponPlus} damage:{props.unit.enemy.secondaryWeaponDamage}d6</Button>
+                        <Button buttonStyle={'stroke-red'} onClick={secondaryAttack}>Secondary hit:+{props.unit.enemy.secondaryWeaponPlus} damage:{props.unit.enemy.secondaryWeaponDamage}d6</Button>
                     </div>
                     <div>
-                        <Button onClick={meleeAttack}>Melee hit:+{props.unit.enemy.meleeWeaponPlus} damage:{props.unit.enemy.meleeWeaponDamage}d6</Button>
+                        <Button buttonStyle={'stroke-red'} onClick={meleeAttack}>Melee hit:+{props.unit.enemy.meleeWeaponPlus} damage:{props.unit.enemy.meleeWeaponDamage}d6</Button>
                     </div>
                 </Modal>
                 <Modal visible={modalHit} setVisible={setModalHit}>
                     <div>{hit} hits?</div>
-                    <Button onClick={damageCounter}>Yes</Button>
-                    <Button onClick={() => setModalHit(false)}>No</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={damageCounter}>Yes</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => setModalHit(false)}>No</Button>
                 </Modal>
                 <Modal visible={modalDamage} setVisible={setModalDamage}>
                     <div>Total damage: {sum()}</div>
                     <div>Damage: {printDamage()}</div>
-                    <Button onClick={() => setModalDamage(false)}>Close</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => setModalDamage(false)}>Close</Button>
                 </Modal>
             </span>
             <span className={classes.button}>
-                <Button onClick={() => setModalPartR(true)} dis={isPlayer}>Damage</Button>
+                <Button buttonStyle={'stroke-red'} onClick={() => setModalPartR(true)} dis={isPlayer}>Damage</Button>
                 <Modal visible={modalPartR} setVisible={setModalPartR}>
-                    <Button onClick={() => choosePartReceive('body')}>Body</Button>
-                    <Button onClick={() => choosePartReceive('head')}>Head</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => choosePartReceive('body')}>Body</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={() => choosePartReceive('head')}>Head</Button>
                 </Modal>
                 <Modal visible={modalReceive} setVisible={setModalReceive}>
                     <Input
@@ -220,11 +219,11 @@ const UnitItem = (props) => {
                         onChange={e => setRDamage(e.target.value)}
                         type = "number"
                         placeholder="Damage"t/>
-                    <Button onClick={receiveDamage}>Take damage</Button>
+                    <Button buttonStyle={'stroke-red'} onClick={receiveDamage}>Take damage</Button>
                 </Modal>
             </span>
             <span className={classes.button}>
-                <Button onClick={edit}>Edit</Button>
+                <Button buttonStyle={'stroke-red'} onClick={edit}>Edit</Button>
                 <Modal visible={modalEdit} setVisible={setModalEdit}>
                     <table>
                         <thead>
@@ -275,14 +274,14 @@ const UnitItem = (props) => {
                                     placeholder="armor head"t/>
                             </td>
                             <td>
-                                <Button onClick={change}>Change</Button>
+                                <Button buttonStyle={'stroke-red'} onClick={change}>Change</Button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </Modal>
             </span>
-            <span className={classes.button}><Button onClick={() => props.removeEnemy(props.unit)}>Delete</Button></span>
+            <span className={classes.button}><Button buttonStyle={'stroke-red'} onClick={() => props.removeEnemy(props.unit)}>Delete</Button></span>
         </tr>
     );
 };

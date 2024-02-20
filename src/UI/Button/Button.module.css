@@ -1,4 +1,5 @@
-.myBtn{
+
+.strokeRedButton{
     padding: 5px 10px;
     color: #cb2418;
     font-size: 1.5vh;
@@ -7,12 +8,28 @@
     cursor: pointer;
     vertical-align: center;
 }
-.myBtnDis{
+.disStrokeRedButton{
     padding: 5px 10px;
     color: rgba(0, 128, 128, 0.4);
     font-size: 1.5vh;
     background: transparent;
     border: 2px solid rgba(0, 128, 128, 0.4);
+    cursor: pointer;
+    vertical-align: center;
+}
+.redButton{
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 1.5vh;
+    background: #cb2418;
+    cursor: pointer;
+    vertical-align: center;
+}
+.disRedButton{
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 1.5vh;
+    background: #A1A1A1;
     cursor: pointer;
     vertical-align: center;
 }

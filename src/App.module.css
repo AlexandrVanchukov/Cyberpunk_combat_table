@@ -4,6 +4,7 @@ div{
 }
 body{
     margin: 0;
+    background-color: #252525;
 }
 .header{
     background-color: #cb2418;
@@ -16,7 +17,6 @@ body{
     margin: 10px 0px 10px 10px;
 }
 .headerLink{
-
     text-decoration: none;
     color: #cb2418;
 }
